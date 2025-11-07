@@ -1,6 +1,6 @@
 # DragonTsuchinoko
 
-![gif](https://github.com/yomogidx/DragonTsuchinoko/blob/main/image/movie.gif)
+![gif](https://github.com/yomogidx/DragonTsuchinoko/image/movie.gif)
 
 ## ゲーム概要（Overview）
 
@@ -26,4 +26,4 @@
 
 ## Licence
 
-[MIT](https://github.com/yomogidx/DragonTsuchinoko/blob/main/LICENSE)
+[Licence](https://github.com/yomogidx/DragonTsuchinoko/LICENSE)
