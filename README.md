@@ -1,24 +1,24 @@
 # DragonTsuchinoko
 
-![gif](https://github.com/yomogidx/DragonTsuchinoko/image/movie.gif)
+![gif](https://github.com/yomogidx/DragonTsuchinoko/blob/master/image/movie.gif)
 
-## ƒQ[ƒ€ŠT—viOverviewj
+## ã‚²ãƒ¼ãƒ æ¦‚è¦ï¼ˆOverviewï¼‰
 
-ƒhƒ‰ƒSƒ“Œ`‘Ô‚Ì‚Â‚¿‚Ì‚±‚¿‚á‚ñ‚ğ“®‚©‚µ‚Ä‚Ù‚±‚è‚ğ‘|œ‚·‚éƒQ[ƒ€‚Å‚·B
+ãƒ‰ãƒ©ã‚´ãƒ³å½¢æ…‹ã®ã¤ã¡ã®ã“ã¡ã‚ƒã‚“ã‚’å‹•ã‹ã—ã¦ã»ã“ã‚Šã‚’æƒé™¤ã™ã‚‹ã‚²ãƒ¼ãƒ ã§ã™ã€‚
 
-## ‘€ì•û–@
+## æ“ä½œæ–¹æ³•
 
-EˆÚ“®FƒL[ƒ{[ƒhiW/A/S/Djor ƒNƒŠƒbƒN
+ãƒ»ç§»å‹•ï¼šã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ï¼ˆW/A/S/Dï¼‰or ã‚¯ãƒªãƒƒã‚¯
 
-## ƒvƒŒƒCiPlayj
+## ãƒ—ãƒ¬ã‚¤ï¼ˆPlayï¼‰
 
 [https://unityroom.com/games/dragontsuchinoko](https://unityroom.com/games/dragontsuchinoko)
 
-## ‰¹º‘fŞ
+## éŸ³å£°ç´ æ
 
 [DOVA-SYNDROME](https://dova-s.jp/)  
 [OtoLogic](https://otologic.jp/)  
-[Œø‰Ê‰¹ƒ‰ƒ{](https://soundeffect-lab.info/)  
+[åŠ¹æœéŸ³ãƒ©ãƒœ](https://soundeffect-lab.info/)  
 
 ## Author
 
@@ -26,4 +26,4 @@
 
 ## Licence
 
-[Licence](https://github.com/yomogidx/DragonTsuchinoko/LICENSE)
+[Licence](https://github.com/yomogidx/DragonTsuchinoko/blob/master/LICENSE)
