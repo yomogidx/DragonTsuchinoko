@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 //--------------------------------------------------------------------
 //  PlayerControllerクラス
@@ -138,17 +139,30 @@ public class PlayerController : MonoBehaviour
     //--------------------------------------------------------------------
     void MouseInputprocess()
     {
-        if (Mouse.current.leftButton.isPressed) // 左クリック
+        Vector2 position = Vector2.zero;
+
+        // スマホのタッチ座標取得
+        if (Touch.activeTouches.Count > 0)
         {
-            // プレイヤーの座標を中心としてマウスクリック位置の方向を取得
+            foreach (var touch in Touch.activeTouches)
+            {
+                position = touch.screenPosition;
+            }
+        }
+        // マウスのタッチ座標取得
+        else if (Mouse.current != null && Mouse.current.leftButton.isPressed)
+        {
+            position = Mouse.current.position.ReadValue();
+        }
+
+        // 移動
+        if (position != Vector2.zero)
+        {
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             //Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
             Vector2 screenCenter = new Vector2(screenPosition.x, screenPosition.y);
-            Vector2 clickPos = Mouse.current.position.ReadValue();
-            Vector2 direction = (clickPos - screenCenter).normalized;
+            Vector2 direction = (position - screenCenter).normalized;
             int degree = GetDirection8(direction);
-
-            // 移動
             MoveDegree(degree);
         }
     }
@@ -158,8 +172,8 @@ public class PlayerController : MonoBehaviour
     //--------------------------------------------------------------------
     void OnEnable()
     {
-        //EnhancedTouchSupport.Enable();
-        //TouchSimulation.Enable(); // ←これがポイント！
+        EnhancedTouchSupport.Enable();
+        //TouchSimulation.Enable();
         //UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown += OnFingerDown;
     }
 
@@ -170,7 +184,7 @@ public class PlayerController : MonoBehaviour
     {
         //UnityEngine.InputSystem.EnhancedTouch.Touch.onFingerDown -= OnFingerDown;
         //TouchSimulation.Disable();
-        //EnhancedTouchSupport.Disable();
+        EnhancedTouchSupport.Disable();
     }
 
     //--------------------------------------------------------------------

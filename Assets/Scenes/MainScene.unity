@@ -5381,6 +5381,7 @@ MonoBehaviour:
   rotationSpeed: 1000
   PlayerAnimator: {fileID: 1323508433}
   FirePrefab: {fileID: 405960360}
+  Gamera: {fileID: 0}
 --- !u!54 &1323508436
 Rigidbody:
   m_ObjectHideFlags: 0
