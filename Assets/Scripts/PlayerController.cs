@@ -25,6 +25,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     [Tooltip("毎フレームごとの移動済管理フラグ")]
     private bool MoveFrameFlag;
+    [Tooltip("カメラオブジェクト")]
+    public GameObject Gamera;
 
     //--------------------------------------------------------------------
     // 初期化処理
@@ -138,10 +140,15 @@ public class PlayerController : MonoBehaviour
     {
         if (Mouse.current.leftButton.isPressed) // 左クリック
         {
-            Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            // プレイヤーの座標を中心としてマウスクリック位置の方向を取得
+            Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+            //Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
+            Vector2 screenCenter = new Vector2(screenPosition.x, screenPosition.y);
             Vector2 clickPos = Mouse.current.position.ReadValue();
             Vector2 direction = (clickPos - screenCenter).normalized;
             int degree = GetDirection8(direction);
+
+            // 移動
             MoveDegree(degree);
         }
     }
